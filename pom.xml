@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.tijo</groupId>
+	<artifactId>jwt-security-tools</artifactId>
+	<version>1.0.1</version>
+	<name>jwt-security-tools</name>
+	<description>jwt-security-tools</description>
+
+
+	<properties>
+		<jdk.version>1.8</jdk.version>
+		<spring.boot.version>2.1.0.RELEASE</spring.boot.version>
+		<spring.version>5.1.2.RELEASE</spring.version>
+	    <maven.compiler.source>1.8</maven.compiler.source>
+	    <maven.compiler.target>1.8</maven.compiler.target>        
+        <jackson.version>2.10.0</jackson.version>
+        <jaxb.version>2.3.1</jaxb.version>		
+        <sonar.dependencyCheck.reportPath>${basedir}/dependency-check-report.xml</sonar.dependencyCheck.reportPath>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${spring.boot.version}</version><!--$NO-MVN-MAN-VER$ -->
+		</dependency>	
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-annotations</artifactId>
+		    <version>2.9.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.6.2</version><!--$NO-MVN-MAN-VER$ -->
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20160212</version><!--$NO-MVN-MAN-VER$ -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+			<version>${spring.boot.version}</version><!--$NO-MVN-MAN-VER$ -->
+		</dependency>
+		<dependency>
+			<groupId>br.com.tijo</groupId>
+			<artifactId>jwt-tools</artifactId>
+			<version>1.0.1</version><!--$NO-MVN-MAN-VER$ -->
+		</dependency>		
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+		</dependency>
+	</dependencies>
+
+
+    <build>
+        <finalName>jwt-security-tools</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
