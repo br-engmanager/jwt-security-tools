@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.tijo</groupId>
 	<artifactId>jwt-security-tools</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<name>jwt-security-tools</name>
 	<description>jwt-security-tools</description>
 
@@ -51,7 +51,7 @@
 		<dependency>
 			<groupId>br.com.tijo</groupId>
 			<artifactId>jwt-tools</artifactId>
-			<version>1.0.1</version><!--$NO-MVN-MAN-VER$ -->
+			<version>1.0.2</version><!--$NO-MVN-MAN-VER$ -->
 		</dependency>		
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
