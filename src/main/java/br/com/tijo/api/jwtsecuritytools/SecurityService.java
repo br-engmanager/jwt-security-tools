@@ -39,13 +39,15 @@ public class SecurityService {
 		return token;
 	}
 	public void setToken(String token) {
-		this.token = token;
-		try {
-			this.setExpTime(JwtTokenTools.getClaimFromToken(this.getToken(), Claims::getExpiration));
-			this.setUserId(JwtTokenTools.getClaimFromToken(this.getToken(), Claims::getSubject));
-			this.setStatus(JwtTokenTools.getClaimFromToken(this.getToken(), "status"));
+		if(token != null && token != "") {
+			this.token = token;
+			try {
+				this.setExpTime(JwtTokenTools.getClaimFromToken(this.getToken(), Claims::getExpiration));
+				this.setUserId(JwtTokenTools.getClaimFromToken(this.getToken(), Claims::getSubject));
+				this.setStatus(JwtTokenTools.getClaimFromToken(this.getToken(), "status"));
+			}
+			catch (Exception e) {}
 		}
-		catch (Exception e) {}
 	}
 
 	public String getStatus() {
@@ -72,7 +74,7 @@ public class SecurityService {
 		validated = false;
 	}
 	
-	public void initializeFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain, List<ISecurity> validationList) throws IOException, ServletException {
+	public void initializeFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain, List<ISecurity> validationList, List<RouteException> exceptions) throws IOException, ServletException {
 		
 		initializeVariables();
 		
@@ -81,8 +83,32 @@ public class SecurityService {
 			return;
 		}
 
+		notValidatedPath(request, exceptions);
+		
+		if(!validated) {
+			validateTokenAuthenticated(request, validationList);
+		}
+
+	}
+
+	private void notValidatedPath(HttpServletRequest request, List<RouteException> exceptions) {
+		if(exceptions != null && exceptions.size()>0) {
+			for (RouteException routeException : exceptions) {
+				if(request.getMethod().equals(routeException.getMethod()) &&
+						(routeException.getPath().equals("*") ||
+								request.getRequestURI().endsWith(routeException.getPath())
+								)) {
+					this.validated = true;
+					break;
+				}
+			}
+		}	
+	}
+	
+	private void validateTokenAuthenticated(HttpServletRequest request, List<ISecurity> validationList) {
 		if(validationList == null || validationList.size()==0) {
 			validated = JwtTokenTools.validateToken(request);
+			setToken(JwtTokenTools.getTokenFromRequest(request));
 		}
 		else {
 			for (ISecurity r : validationList) {
@@ -100,18 +126,21 @@ public class SecurityService {
 				this.setToken(JwtTokenTools.getTokenFromRequest(request));
 			}
 			
-			UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
-					this.getUserId(), null, null);
-
-			usernamePasswordAuthenticationToken
-			.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-
-			SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
-
-		}
+			validateSecurityOK(request, this.getUserId());
+			
+		}	
 	}
 	
+	private void validateSecurityOK(HttpServletRequest request, String userName){
+		UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
+				userName, null, null);
 
+		usernamePasswordAuthenticationToken
+		.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+
+		SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+
+	}
 
 	
 }
