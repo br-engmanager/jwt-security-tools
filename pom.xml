@@ -25,7 +25,7 @@
 	   <repository>
 	     <id>github</id>
 	     <name>GitHub OWNER Apache Maven Packages</name>
-	     <url>https://maven.pkg.github.com/cleber-ortiz/api-login</url>
+	     <url>https://maven.pkg.github.com/cleber-ortiz/jwt-security-tools</url>
 	   </repository>
 	</distributionManagement>
 
@@ -71,7 +71,7 @@
     <repository>
       <id>jwt-tools</id>
       <name>your custom repo</name>
-      <url>https://maven.pkg.github.com/cleber-ortiz/jwt-tools</url>
+      <url>https://maven.pkg.github.com/cleber-ortiz/jwt-security-tools</url>
     </repository>
   </repositories>
 
