@@ -72,12 +72,29 @@
 		</dependency>
 	</dependencies>
 
+
+  <repositories>
+    <repository>
+      <id>jwttools</id>
+      <name>jwttools</name>
+      <url>https://maven.pkg.github.com/cleber-ortiz/jwt-tools</url>
+    </repository>
+    <repository>
+      <id>apiusuariosdto</id>
+      <name>apiusuariosdto</name>
+      <url>https://maven.pkg.github.com/cleber-ortiz/api-usuarios-dto</url>
+    </repository>   
+  </repositories>
+
+
+
     <build>
         <finalName>jwt-security-tools</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>4.0.0</version>
             </plugin>
         </plugins>
     </build>
