@@ -62,8 +62,8 @@
 		</dependency>		
 		<dependency>
 			<groupId>br.com.tijo</groupId>
-			<artifactId>api-mail-dto</artifactId>
-			<version>1.0.4</version><!--$NO-MVN-MAN-VER$ -->
+			<artifactId>api-usuarios-dto</artifactId>
+			<version>1.0.2</version><!--$NO-MVN-MAN-VER$ -->
 		</dependency>		
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>

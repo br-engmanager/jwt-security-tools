@@ -24,8 +24,8 @@
                   </releases>
                 </repository>
                 <repository>
-                    <id>apimaildto</id>
-                    <url>https://maven.pkg.github.com/cleber-ortiz/api-mail-dto</url>
+                    <id>apiusuariosdto</id>
+                    <url>https://maven.pkg.github.com/cleber-ortiz/api-usuarios-dto</url>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
