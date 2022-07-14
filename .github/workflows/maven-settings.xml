@@ -14,7 +14,7 @@
                     <url>https://repo1.maven.org/maven2</url>
                 </repository>
                 <repository>
-                    <id>jwttools</id>
+                    <id>github</id>
                     <url>https://maven.pkg.github.com/cleber-ortiz/jwt-tools</url>
                     <snapshots>
                         <enabled>true</enabled>
