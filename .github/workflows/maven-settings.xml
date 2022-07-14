@@ -14,7 +14,7 @@
                     <url>https://repo1.maven.org/maven2</url>
                 </repository>
                 <repository>
-                    <id>github</id>
+                    <id>jwttools</id>
                     <url>https://maven.pkg.github.com/cleber-ortiz/jwt-tools</url>
                     <snapshots>
                         <enabled>true</enabled>
@@ -23,6 +23,16 @@
                         <enabled>true</enabled>
                   </releases>
                 </repository>
+                <repository>
+                    <id>apimaildto</id>
+                    <url>https://maven.pkg.github.com/cleber-ortiz/api-mail-dto</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                  </releases>
+                </repository>                
             </repositories>
         </profile>
     </profiles>

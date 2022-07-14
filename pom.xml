@@ -61,20 +61,16 @@
 			<version>1.0.3</version><!--$NO-MVN-MAN-VER$ -->
 		</dependency>		
 		<dependency>
+			<groupId>br.com.tijo</groupId>
+			<artifactId>api-mail-dto</artifactId>
+			<version>1.0.4</version><!--$NO-MVN-MAN-VER$ -->
+		</dependency>		
+		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt</artifactId>
 			<version>0.9.1</version>
 		</dependency>
 	</dependencies>
-
-  <repositories>
-    <repository>
-      <id>jwt-tools</id>
-      <name>your custom repo</name>
-      <url>https://maven.pkg.github.com/cleber-ortiz/jwt-tools</url>
-    </repository>
-  </repositories>
-  
 
     <build>
         <finalName>jwt-security-tools</finalName>
