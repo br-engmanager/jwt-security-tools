@@ -39,11 +39,6 @@
 
     <servers>
         <server>
-            <id>github</id>
-            <username>${env.GIT_USER}</username>
-           <password>${env.GIT_TOKEN}</password>
-        </server>    
-        <server>
             <id>jwttools</id>
             <username>${env.GIT_USER}</username>
            <password>${env.GIT_TOKEN}</password>
