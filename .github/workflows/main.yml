@@ -25,7 +25,8 @@ jobs:
         with:
           java-version: '8'
           distribution: 'adopt'
-      
+          server-id: github
+
       - name: Publish package
         run: mvn -s $GITHUB_WORKSPACE/.github/workflows/maven-settings.xml --batch-mode -X deploy 
         env:
