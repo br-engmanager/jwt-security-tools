@@ -67,7 +67,13 @@
 		</dependency>
 	</dependencies>
 
-
+  <repositories>
+    <repository>
+      <id>jwt-tools</id>
+      <name>your custom repo</name>
+      <url>https://maven.pkg.github.com/cleber-ortiz/jwt-tools</url>
+    </repository>
+  </repositories>
 
     <build>
         <finalName>jwt-security-tools</finalName>
