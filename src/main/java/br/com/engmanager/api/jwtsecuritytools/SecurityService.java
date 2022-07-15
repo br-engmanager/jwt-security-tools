@@ -1,4 +1,4 @@
-package br.com.tijo.api.jwtsecuritytools;
+package br.com.engmanager.api.jwtsecuritytools;
 
 import java.io.IOException;
 import java.util.Date;
@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import br.com.tijo.api.jwttools.JwtTokenTools;
+import br.com.engmanager.api.jwttools.JwtTokenTools;
 import io.jsonwebtoken.Claims;
 
 @Service

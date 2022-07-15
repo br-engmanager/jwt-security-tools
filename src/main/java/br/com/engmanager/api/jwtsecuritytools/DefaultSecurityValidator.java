@@ -1,8 +1,8 @@
-package br.com.tijo.api.jwtsecuritytools;
+package br.com.engmanager.api.jwtsecuritytools;
 
 import javax.servlet.http.HttpServletRequest;
 
-import br.com.tijo.api.jwttools.JwtTokenTools;
+import br.com.engmanager.api.jwttools.JwtTokenTools;
 
 public class DefaultSecurityValidator implements ISecurity {
 
