@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.com.tijo</groupId>
+	<groupId>br.com.engmanager</groupId>
 	<artifactId>jwt-security-tools</artifactId>
 	<version>1.0.11</version>
 	<name>jwt-security-tools</name>
@@ -25,7 +25,7 @@
 	   <repository>
 	     <id>github</id>
 	     <name>GitHub OWNER Apache Maven Packages</name>
-	     <url>https://maven.pkg.github.com/cleber-ortiz/jwt-security-tools</url>
+	     <url>https://maven.pkg.github.com/br-engmanager/jwt-security-tools</url>
 	   </repository>
 	</distributionManagement>
 
@@ -56,14 +56,9 @@
 			<version>${spring.boot.version}</version><!--$NO-MVN-MAN-VER$ -->
 		</dependency>
 		<dependency>
-			<groupId>br.com.tijo</groupId>
+			<groupId>br.com.engmanager</groupId>
 			<artifactId>jwt-tools</artifactId>
-			<version>1.0.3</version><!--$NO-MVN-MAN-VER$ -->
-		</dependency>		
-		<dependency>
-			<groupId>br.com.tijo</groupId>
-			<artifactId>api-usuarios-dto</artifactId>
-			<version>1.0.2</version><!--$NO-MVN-MAN-VER$ -->
+			<version>1.1.0</version><!--$NO-MVN-MAN-VER$ -->
 		</dependency>		
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
@@ -71,6 +66,14 @@
 			<version>0.9.1</version>
 		</dependency>
 	</dependencies>
+
+	  <repositories>
+	    <repository>
+	      <id>jwt-tools</id>
+	      <name>your custom repo</name>
+	      <url>https://maven.pkg.github.com/br-engmanager/jwt-tools</url>
+	    </repository>
+	  </repositories>
 
 
     <build>

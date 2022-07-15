@@ -14,8 +14,8 @@
                     <url>https://repo1.maven.org/maven2</url>
                 </repository>
                 <repository>
-                    <id>jwttools</id>
-                    <url>https://maven.pkg.github.com/cleber-ortiz/jwt-tools</url>
+                    <id>jwt-tools</id>
+                    <url>https://maven.pkg.github.com/br-engmanager/jwt-tools</url>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
@@ -23,16 +23,6 @@
                         <enabled>true</enabled>
                   </releases>
                 </repository>
-                <repository>
-                    <id>apiusuariosdto</id>
-                    <url>https://maven.pkg.github.com/cleber-ortiz/api-usuarios-dto</url>
-                    <snapshots>
-                        <enabled>true</enabled>
-                    </snapshots>
-                    <releases>
-                        <enabled>true</enabled>
-                  </releases>
-                </repository>                
             </repositories>
         </profile>
     </profiles>
@@ -42,18 +32,12 @@
             <id>github</id>
             <username>${env.GIT_USER}</username>
            <password>${env.GIT_TOKEN}</password>
-        </server>    
+        </server>
         <server>
-            <id>jwttools</id>
+            <id>jwt-tools</id>
             <username>${env.GIT_USER}</username>
            <password>${env.GIT_TOKEN}</password>
         </server>
-        <server>
-            <id>apiusuariosdto</id>
-            <username>${env.GIT_USER}</username>
-           <password>${env.GIT_TOKEN}</password>
-        </server>
-       
     </servers>
 
 </settings>
